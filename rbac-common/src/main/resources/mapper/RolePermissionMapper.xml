@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="top.getawaycar.rbac.common.dao.RolePermissionDAO">
+    <insert id="saveRelatePermissionBatch">
+        INSERT INTO am_role_permission( role_id, permission_id, data_status, create_time) VALUES
+        <foreach collection="permissionIds" item="value" separator=",">
+            (#{roleId},#{value},1,#{currentTimestamps})
+        </foreach>
+    </insert>
+</mapper>
