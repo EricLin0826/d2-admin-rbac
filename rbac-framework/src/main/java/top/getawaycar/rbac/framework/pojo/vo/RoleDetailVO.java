@@ -5,7 +5,7 @@ import lombok.*;
 import java.util.List;
 
 /**
- * 创建角色DTO
+ * 角色详情视图
  *
  * @author EricJeppesen
  * @date 2022/10/21 23:57

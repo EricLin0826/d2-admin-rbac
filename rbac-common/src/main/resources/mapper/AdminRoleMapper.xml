@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="top.getawaycar.rbac.common.dao.AdminRoleDAO">
+
+
+    <insert id="saveRelateRoleBatch">
+        INSERT INTO am_admin_role( admin_id,role_id, data_status, create_time) VALUES
+        <foreach collection="roleIds" item="value" separator=",">
+            (#{adminId},#{value},1,#{currentTimestamps})
+        </foreach>
+    </insert>
+
+</mapper>

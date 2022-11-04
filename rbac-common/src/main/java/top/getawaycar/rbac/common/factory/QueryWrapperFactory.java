@@ -62,4 +62,17 @@ public class QueryWrapperFactory {
         return queryWrapper;
     }
 
+    /**
+     * 构建删除的查询条件
+     *
+     * @param <T> 泛型
+     * @return 查询条件 WHERE data_status = 0
+     */
+    public static <T> QueryWrapper<T> buildRemovedQueryWrapper() {
+        QueryWrapper<T> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq(DATA_STATUS_FILED, DBDataStatusEnum.DISABLE.getValue());
+        return queryWrapper;
+    }
+
+
 }

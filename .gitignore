@@ -1,0 +1,5 @@
+# Project exclude paths
+/rbac-common/target/
+/rbac-framework/target/
+/rbac-system/target/
+/.idea/

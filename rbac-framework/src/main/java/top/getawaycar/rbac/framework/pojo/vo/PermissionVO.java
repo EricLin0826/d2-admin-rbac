@@ -72,6 +72,10 @@ public class PermissionVO {
      */
     private Integer dataStatus;
 
+    /**
+     * 重定向地址
+     */
+    private String redirectUrl;
     public String[] getParentIds() {
         return parentIds.split(StrUtil.SLASH);
     }

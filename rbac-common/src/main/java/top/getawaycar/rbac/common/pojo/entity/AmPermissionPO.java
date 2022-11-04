@@ -84,5 +84,8 @@ public class AmPermissionPO {
      */
     @TableField(fill = FieldFill.INSERT)
     private Integer dataStatus;
-
+    /**
+     * 重定向地址
+     */
+    private String redirectUrl;
 }

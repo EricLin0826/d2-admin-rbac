@@ -63,5 +63,9 @@ public class ModifyPermissionDTO {
      * 数据状态（0锁定，1正常）
      */
     private Integer dataStatus;
+    /**
+     * 重定向地址
+     */
+    private String redirectUrl;
 
 }

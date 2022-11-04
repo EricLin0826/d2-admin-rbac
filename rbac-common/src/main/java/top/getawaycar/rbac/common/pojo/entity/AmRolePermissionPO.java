@@ -2,11 +2,12 @@ package top.getawaycar.rbac.common.pojo.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 
 /**
  * null
- * 
+ *
  * @author EricJeppesen
  * @date 2022-10-14 02:51 下午
  */
@@ -47,4 +48,7 @@ public class AmRolePermissionPO {
     @TableField(fill = FieldFill.UPDATE)
     private Long lastUpdateTime;
 
+    public AmRolePermissionPO(Integer dataStatus) {
+        this.dataStatus = dataStatus;
+    }
 }

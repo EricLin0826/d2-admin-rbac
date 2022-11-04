@@ -1,6 +1,6 @@
-package top.getawaycar.rbac.common.factory;
+package top.getawaycar.rbac.mvc.factory;
 
-import top.getawaycar.rbac.common.pojo.vo.RestControllerResponseVO;
+import top.getawaycar.rbac.mvc.pojo.vo.RestControllerResponseVO;
 
 /**
  * RestController响应视图

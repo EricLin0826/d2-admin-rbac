@@ -1,4 +1,4 @@
-package top.getawaycar.rbac.framework.configuration;
+package top.getawaycar.rbac.mvc.configuration;
 
 
 import cn.hutool.core.exceptions.StatefulException;
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
-import top.getawaycar.rbac.common.factory.RestControllerResponseFactory;
 import top.getawaycar.rbac.common.pojo.exception.GetawayCarException;
-import top.getawaycar.rbac.common.pojo.vo.RestControllerResponseVO;
+import top.getawaycar.rbac.mvc.factory.RestControllerResponseFactory;
+import top.getawaycar.rbac.mvc.pojo.vo.RestControllerResponseVO;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -60,6 +60,7 @@ public class GetawayCarHttpResponseAspect implements ResponseBodyAdvice<Object> 
     public Object errorHandler(Exception e) {
         RestControllerResponseVO<Object> errorResponse = RestControllerResponseFactory.buildErrorResponse(5000, "服务器内部错误，请联系管理人员！");
         try {
+            e.printStackTrace();
             Matcher m = CHINESE_PATTERN.matcher(e.getMessage());
             if (e instanceof GetawayCarException) {
                 GetawayCarException getawayCarException = (GetawayCarException) e;

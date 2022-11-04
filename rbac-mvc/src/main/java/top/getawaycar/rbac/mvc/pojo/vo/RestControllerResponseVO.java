@@ -1,4 +1,4 @@
-package top.getawaycar.rbac.common.pojo.vo;
+package top.getawaycar.rbac.mvc.pojo.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
